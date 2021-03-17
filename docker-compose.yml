@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  updater:
+    build: .
+    container_name: route-53-updater
+    volumes:
+      - /Users/neolitec/dev/docker-route-53-updater/config:/root/config
+    environment:
+      - AWS_ACCESS_KEY_ID=...
+      - AWS_SECRET_ACCESS_KEY=...
